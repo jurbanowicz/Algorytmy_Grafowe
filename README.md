@@ -1,1 +1,1 @@
-Algorytmy Grafowe
+Graph Algorithms Labs
