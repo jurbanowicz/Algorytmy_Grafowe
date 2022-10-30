@@ -12,7 +12,7 @@ def run_all_graphs(folder_path, solution):
     for i, file_name in enumerate(os.listdir(folder_path)):
 
 
-        print("Test number: ", i)
+        print("Test number - ", i)
         corr_res = readSolution(folder_path + file_name)
         print("Correct result: ", corr_res)
         (V,L) = loadWeightedGraph(folder_path + file_name)
