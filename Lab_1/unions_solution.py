@@ -17,15 +17,15 @@ class Graph:
         vis = [False for _ in range(self.V)]
 
         st = deque()
-        st.append((0, 0))
+        st.append(0)
         while st:
-            u, w = st.pop()
+            u= st.pop()
             vis[u] = True
             if u == 1:
                 return True
             for v, w in self.graph[u]:
                 if not vis[v]:
-                    st.append((v, w))
+                    st.append(v)
 
         return vis[1]
 
@@ -45,8 +45,7 @@ class Graph:
         for u, v, w in edge_list:
             u -= 1
             v -= 1
-            parent_v = self.find(parent, v)
-            self.union(parent, u, parent_v)
+            self.union(parent, u, self.find(parent, v))
             self.add_edge(u, v, w)
             if self.dfs():
                 return w
