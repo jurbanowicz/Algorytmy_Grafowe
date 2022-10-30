@@ -1,6 +1,7 @@
 from runtests import run_all_graphs
-from dimacs import loadWeightedGraph
-from dimacs import readSolution
+from collections import deque
+# from dimacs import loadWeightedGraph
+# from dimacs import readSolution
 class Graph:
     def __init__(self, vertices) -> None:
         self.V = vertices # number of vertices in the graph
@@ -15,7 +16,7 @@ class Graph:
     def dfs(self):
         vis = [False for _ in range(self.V)]
 
-        st = []
+        st = deque()
         st.append((0, 0))
         while st:
             u, w = st.pop()
