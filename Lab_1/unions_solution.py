@@ -13,7 +13,7 @@ class Graph:
         self.graph[u].append((v, w))
         self.graph[v].append((u, w))
 
-    def dfs(self):
+    def dfs(self): # returns if path between vertecies 0 and 1 exists
         vis = [False for _ in range(self.V)]
 
         st = deque()
