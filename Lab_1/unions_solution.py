@@ -45,9 +45,9 @@ class Graph:
         for u, v, w in edge_list:
             u -= 1
             v -= 1
-            self.union(parent, u, self.find(parent, v))
+            self.union(parent, self.find(parent, u), self.find(parent, v))
             self.add_edge(u, v, w)
-            if self.dfs():
+            if self.find(parent, 0) == self.find(parent, 1):
                 return w
 
 def solution(V, L):
