@@ -8,8 +8,8 @@ def run_weighted_graphs(folder_path, solution):
     failed = 0
     total_s = time.time()
     graphs = os.listdir(folder_path)
+    
     for i, file_name in enumerate(graphs):
-
 
         print("Test number - ", i, graphs[i])
         corr_res = readSolution(folder_path + file_name)

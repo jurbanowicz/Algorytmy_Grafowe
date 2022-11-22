@@ -5,8 +5,15 @@ def change_to_adj_directed(Edges, V):
     G = [[] for _ in range(V)]
 
     for u, v, w in Edges:
-        G[u - 1].append((v - 1, w))
-        G[v - 1].append((u - 1, 0))
+        u -= 1
+        v -= 1
+        G[u].append((v, w))
+        flag = True
+        for item in G[v]:
+            if item[0] == u:
+                flag = False
+        if flag:    
+            G[v].append((u, 0))
 
     return G
 def find_parent(G, u, v):
