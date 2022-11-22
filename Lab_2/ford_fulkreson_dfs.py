@@ -1,5 +1,5 @@
 from dimacs import *
-from runtests import run_weighted_graphs
+from runtests import run_directed_graphs
 
 def change_to_adj_directed(Edges, V):
     G = [[] for _ in range(V)]
@@ -73,4 +73,4 @@ if __name__ == "__main__":
     # (V, L) = loadDirectedWeightedGraph(folder_path + graph)
     # print(main(V, L))
     # print("Correct reuslt: ", readSolution(folder_path + graph))
-    run_weighted_graphs(folder_path, main)
+    run_directed_graphs(folder_path, main)

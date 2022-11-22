@@ -2,7 +2,7 @@ from dimacs import *
 import time
 import os
 
-def run_weighted_graphs(folder_path, solution):
+def run_directed_graphs(folder_path, solution):
     counter = 0
     passed = 0
     failed = 0

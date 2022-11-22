@@ -75,8 +75,8 @@ def main(V, L):
 
 if __name__ == "__main__":
     folder_path = "/Users/jacekurbanowicz/Desktop/WIET/Grafowe/Lab_2/graphs-lab2/connectivity/"
-    graph = "rand100_500"
-    print("Correct result: ", readSolution(folder_path + graph))
-    V, L = loadWeightedGraph(folder_path + graph)
-    print(main(V, L))
-    # run_weighted_graphs(folder_path, main)
+    # graph = "rand100_500"
+    # print("Correct result: ", readSolution(folder_path + graph))
+    # V, L = loadWeightedGraph(folder_path + graph)
+    # print(main(V, L))
+    run_weighted_graphs(folder_path, main)
